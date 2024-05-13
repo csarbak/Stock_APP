@@ -44,9 +44,9 @@ CREATE TABLE stock (
 
 
 
-DROP TABLE IF EXISTS person;
-CREATE TABLE person (
-  personId int AUTO_INCREMENT PRIMARY KEY,
+DROP TABLE IF EXISTS user;
+CREATE TABLE user (
+  userId int AUTO_INCREMENT PRIMARY KEY,
   fName varchar(255) DEFAULT NULL,
   lName varchar(255) DEFAULT NULL,
   priceMax DECIMAL(3,2) Not NULL);
@@ -54,8 +54,8 @@ CREATE TABLE person (
 
 
 
-DROP TABLE IF EXISTS person_stock;
-CREATE TABLE person_stock (
+DROP TABLE IF EXISTS user_stock;
+CREATE TABLE user_stock (
   stock_id INT NOT NULL,
-  person_id INT NOT NULL);
+  user_id INT NOT NULL);
 

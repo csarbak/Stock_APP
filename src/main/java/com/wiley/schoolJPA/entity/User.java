@@ -5,11 +5,11 @@ import java.math.BigDecimal;
 import java.util.Set;
 
 @Entity
-@Table(name = "person")
-public class Person {
+@Table(name = "user")
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "personid", nullable = false)
+    @Column(name = "userid", nullable = false)
     private Integer id;
 
     @Column(name = "fname")
@@ -24,9 +24,9 @@ public class Person {
     @ManyToMany(mappedBy = "stockBuyers")
     private Set<Stock> myStocks;
 
-    public Person() {}
+    public User() {}
 
-    public Person(Set<Stock> myStocks) {
+    public User(Set<Stock> myStocks) {
         this.myStocks = myStocks;
     }
 

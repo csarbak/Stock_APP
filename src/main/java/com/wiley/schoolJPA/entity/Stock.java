@@ -21,15 +21,15 @@ public class Stock {
 
     @ManyToMany
     @JoinTable(
-            name = "person_stock",
+            name = "user_stock",
             joinColumns = {@JoinColumn(name = "stock_id")},
-            inverseJoinColumns = {@JoinColumn(name = "person_id")}
+            inverseJoinColumns = {@JoinColumn(name = "user_id")}
     )
-    private Set<Person> stockBuyers;
+    private Set<User> stockBuyers;
 
     public Stock() {}
 
-    public Stock(Set<Person> stockBuyers) {
+    public Stock(Set<User> stockBuyers) {
         this.stockBuyers =stockBuyers;
     }
 
@@ -58,11 +58,11 @@ public class Stock {
         this.currentPrice = currentPrice;
     }
 
-    public Set<Person> getStockBuyers() {
+    public Set<User> getStockBuyers() {
         return stockBuyers;
     }
 
-    public void setStockBuyers(Set<Person> stockBuyers) {
+    public void setStockBuyers(Set<User> stockBuyers) {
         this.stockBuyers = stockBuyers;
     }
 

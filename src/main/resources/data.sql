@@ -47,9 +47,9 @@ INSERT INTO stock VALUES
 (1,'CS148',1.20),
 (2,'CS100',1.20);
 
-INSERT INTO person VALUES
+INSERT INTO user VALUES
 (1,'Bill','Gates', 1.30),
 (2,'Steve','Martin',1.40);
 
-INSERT INTO person_stock VALUES
+INSERT INTO user_stock VALUES
 (1,1), (1,2), (2,1), (2,2);
